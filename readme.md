@@ -4,7 +4,9 @@
 
 Using docker :
 
-1. Fill docker-composer.yml "database" service with your desired credentials. Example:
+1. Git clone this project
+
+2. Fill docker-composer.yml "database" service with your desired credentials. Example:
 
 ```
 environment:
@@ -14,7 +16,7 @@ environment:
     MYSQL_PASSWORD: symfony
 ```
 
-2. Create .env file with database connection string. Example if using the docker DB service:
+3. Create .env file with database connection string. Example if using the docker DB service:
 
 ```
 cd /app
@@ -34,7 +36,7 @@ MESSENGER_TRANSPORT_DSN=doctrine://default?auto_setup=0
 DATABASE_URL="mysql://root:secret@mysql_database:3306/facetec?serverVersion=8.0"
 ```
 
-3. Run the docker containers:
+4. Run the docker containers (from the root folder):
 
 ```
 docker-compose up --build
@@ -42,7 +44,7 @@ docker-compose up --build
 
 **_NOTE:_**  Use -d flag to detach the console
 
-4. SSH into docker container (Use docker dashboard "Open in terminal" option or use this command: ```
+5. SSH into docker container (Use docker dashboard "Open in terminal" option or use this command: ```
 docker exec -it <container name> /bin/bash```) and run the following commands:
 
 ```
