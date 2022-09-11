@@ -83,10 +83,10 @@ symfony check:requirements
 
 # Project
 
-What is done is this project :
+What is included in this project :
 
 - MySql database
-- User entity, controller, repo, etc
+- User entity, controller, repo, form and more.
 - Custom validation constraint called "FacetecString", about this validator:
 
 The validation constraint should test that a string contains either the text “Face” (case sensitive) or the text “Tec” (case insensitive)
@@ -94,7 +94,7 @@ The validation constraint should test that a string contains either the text “
 - Twig template that lists existing users in BD.
 - Twig template that allows the creation of new users.
 - Application of the FacetecString constraint in the user name field on the User entity.
-- Unit tests for the FacetecString constraint, to run:
+- Unit tests for the FacetecString constraint, you can run them:
 
 ``` 
 php bin/phpunit tests/Validator
