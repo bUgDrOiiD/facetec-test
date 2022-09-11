@@ -2,7 +2,7 @@
 
 ## Running the project
 
-Using docker :
+Using docker (Install [Docker](https://www.docker.com/) if needed):
 
 1. Git clone this project
 
