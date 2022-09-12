@@ -26,7 +26,7 @@ class FacetecStringValidator extends ConstraintValidator
             throw new UnexpectedValueException($value, 'string');
         }        
 
-        // Fail the validation if the string contains “Face” (case sensitive) or the text “Tec” (case insensitive)
+        // Fail the validation if the string does not “Face” (case sensitive) or the text “Tec” (case insensitive)
         if (!(preg_match("#Face#", $value) || preg_match("#tec#i", $value))) {
             $this->context->buildViolation($constraint->message)
                 ->setParameter('{{ value }}', $value)

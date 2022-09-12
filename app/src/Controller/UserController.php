@@ -30,6 +30,7 @@ class UserController extends AbstractController
 
             $user = $form->getData();
 
+            // Save user to DB
             $entityManager->persist($user);
             $entityManager->flush();
 
@@ -38,6 +39,7 @@ class UserController extends AbstractController
                 'User was sucessfully created'
             );
 
+            // Redirect to same page after form submission
             return $this->redirect($request->getUri());
         }
 
